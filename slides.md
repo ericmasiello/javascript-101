@@ -6,7 +6,7 @@
 ## About me 🤓
 
 * @ericmasiello
-* UI Architect @ Vistaprint Digital
+* UI Architect @ Vistaprint
 * Front-End Web Development (FEWD) Instructor at General Assembly
 * Co-Author of _Mastering React Native_
 
@@ -33,13 +33,6 @@
 ## Setting expectations
 
 2 hours is not a lot of time
-
-
----
-
-### Becoming a programmer
-
-It isn't about the programming language - _it's a way of thinking._
 
 ---
 
@@ -128,12 +121,6 @@ Note:
 
 [![Browser Rendering Diagram](img/browser-rendering-dom-diagram.png)](img/browser-rendering-dom-diagram.png)
 
---
-
-
-## DOM: Document Object Model
-
-> Essentially, the DOM is an internal data structure managed by web browsers that represents what you _actually_ see when you look at any web page. It takes **HTML**, **CSS**, and instructions written in **JavaScript** to decide what it should display at any moment.
 
 --
 
@@ -148,12 +135,20 @@ Note:
 
 - DOM is techncially not part of the JavaScript language. Its part of the browser
 
+--
+
+
+## DOM: Document Object Model
+
+> Essentially, the DOM is an internal data structure managed by web browsers that represents what is in the web page. It takes **HTML**, **CSS**, and instructions written in **JavaScript** to decide what it should display at any moment.
+
+
 ---
 
 ## `document` object
 
  - Browser exposes the DOM to JavaScript via the `document` object
- - Most of what you do with client-side JavaScript revolves around manipulating the DOM via the `document` object
+ - Most client-side JavaScript involves manipulating the DOM via the `document` object
 
  ```js
 // Create a <p> node
@@ -290,8 +285,9 @@ Like with any language, there are formal rules around how to write it. This is t
 
 ### JavaScript syntax examples
 
-* Semicolon - end of a statement
-* Quotation Marks - a String (of characters)
+* Semicolon: marks the end of a statment
+* Quotation Marks: a string (of characters)
+* Parentheses: used to define or execute a function
 
 ```javascript
 function illuminateRed() {
@@ -414,9 +410,9 @@ HTML
 1.  Find some elements on the page
 2.  Listen for some user interaction (click, scroll, mouseover)
 3.  Respond to that event
-    - Add, remove or modify HTML
-    - Add, remove or modify CSS
-    - or anything else :)
+    - Add, remove, or modify HTML
+    - Add, remove, or modify CSS
+    - Or anything else 🤓
 
 --
 
@@ -693,6 +689,7 @@ node add.js 3 4
 * [HTML and CSS: Design and Build Websites](https://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189/ref=sr_1_2?ie=UTF8&qid=1502034868&sr=8-2&keywords=html+css+javascript)
 * _Online_
 * [Code Academy (Free)](https://www.codecademy.com/)
+* [Beginner JavaScript](https://beginnerjavascript.com/)
 * [JavaScript 30 (Free)](https://javascript30.com/)
 * _In Person Courses_
 * [Web Development Immersive (Full Time)](https://generalassemb.ly/education/web-development-immersive)
