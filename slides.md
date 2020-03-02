@@ -121,6 +121,11 @@ Note:
 
 [![Browser Rendering Diagram](img/browser-rendering-dom-diagram.png)](img/browser-rendering-dom-diagram.png)
 
+--
+
+## More details on how browser rendering works
+
+https://itnext.io/how-the-browser-renders-a-web-page-dom-cssom-and-rendering-df10531c9969
 
 --
 
