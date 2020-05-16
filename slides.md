@@ -1,21 +1,21 @@
-
 # JavaScript 101
 
 ---
 
 ## About me 🤓
 
-* @ericmasiello
-* UI Architect @ Vistaprint
-* Front-End Web Development (FEWD) Instructor at General Assembly
-* Co-Author of _Mastering React Native_
+- @ericmasiello
+- UI Architect @ Vistaprint
+- Front-End Web Development (FEWD) Instructor at General Assembly
+- Co-Author of _Mastering React Native_
 
 --
 
 ## Your turn to share 🤗
-* Your name
-* Any programming experience? (HTML, JavaScript, C, etc.)
-* What brought you here today
+
+- Your name
+- Any programming experience? (HTML, JavaScript, C, etc.)
+- What brought you here today
 
 ---
 
@@ -133,8 +133,8 @@ https://itnext.io/how-the-browser-renders-a-web-page-dom-cssom-and-rendering-df1
 
 - Tree data structure managed by the web browser
 - Exposes an "API" to JavaScript allowing web developers to:
- - Manipulate what is rendered to the screen
- - Respond to interactions (e.g. specify what happens when a user clicks)
+- Manipulate what is rendered to the screen
+- Respond to interactions (e.g. specify what happens when a user clicks)
 
 Note:
 
@@ -142,39 +142,38 @@ Note:
 
 --
 
-
 ## DOM: Document Object Model
 
 > Essentially, the DOM is an internal data structure managed by web browsers that represents what is in the web page. It takes **HTML**, **CSS**, and instructions written in **JavaScript** to decide what it should display at any moment.
-
 
 ---
 
 ## `document` object
 
- - Browser exposes the DOM to JavaScript via the `document` object
- - Most client-side JavaScript involves manipulating the DOM via the `document` object
+- Browser exposes the DOM to JavaScript via the `document` object
+- Most client-side JavaScript involves manipulating the DOM via the `document` object
 
- ```js
+```js
 // Create a <p> node
-var pNode = document.createElement('p');
+var pNode = document.createElement("p");
 // Create a text node
-var textNode = document.createTextNode('Hello world');
+var textNode = document.createTextNode("Hello world");
 // Append the text to <p>
 pNode.appendChild(textNode);
 // Append <p>Hello world</p> to <body>
-document.querySelector('body').appendChild(pNode);
+document.querySelector("body").appendChild(pNode);
 ```
 
--- 
+--
 
 ## Getting data from the DOM
 
-| Method Name | Description |
-| --- | --- |
-| `.getElementById()` | Gets a single element by an ID selector |
-| `.querySelector()` | Gets a single element matching the selector |
+| Method Name           | Description                                   |
+| --------------------- | --------------------------------------------- |
+| `.getElementById()`   | Gets a single element by an ID selector       |
+| `.querySelector()`    | Gets a single element matching the selector   |
 | `.querySelectorAll()` | Gets a list of elements matching the selector |
+
 \* There are additional methods for getting DOM nodes
 
 --
@@ -194,7 +193,7 @@ document.querySelector('body').appendChild(pNode);
 
 ```js
 // returns a single Node
-var titleElement = document.getElementById('title');
+var titleElement = document.getElementById("title");
 ```
 
 --
@@ -214,10 +213,10 @@ var titleElement = document.getElementById('title');
 
 ```js
 // returns a single Node
-var titleElement = document.querySelector('#title');
+var titleElement = document.querySelector("#title");
 
 // returns a single Node, but which one?
-var messageElement = document.querySelector('.message');
+var messageElement = document.querySelector(".message");
 ```
 
 --
@@ -237,10 +236,10 @@ var messageElement = document.querySelector('.message');
 
 ```js
 // returns a NodeList of 2 elements
-var messageElements = document.querySelectorAll('.message');
+var messageElements = document.querySelectorAll(".message");
 
 // returns a NodeList of 3 elements
-var allParagraphElements = document.querySelectorAll('p');
+var allParagraphElements = document.querySelectorAll("p");
 ```
 
 --
@@ -262,7 +261,7 @@ var allParagraphElements = document.querySelectorAll('p');
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body>
     <!-- your webpage contents -->
@@ -272,7 +271,26 @@ var allParagraphElements = document.querySelectorAll('p');
   </body>
 </html>
 ```
+
 Put it right before the closing `</body>` element
+
+--
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- your webpage contents -->
+    ...
+  </body>
+</html>
+```
+
+Or use the `defer` attribute and put the `script` element anywhere
 
 ---
 
@@ -282,7 +300,6 @@ Put it right before the closing `</body>` element
 
 \- [Wikipedia](https://en.wikipedia.org/wiki/Syntax_(programming_languages)
 
-
 Note:
 Like with any language, there are formal rules around how to write it. This is the syntax.
 
@@ -290,17 +307,17 @@ Like with any language, there are formal rules around how to write it. This is t
 
 ### JavaScript syntax examples
 
-* Semicolon: marks the end of a statment
-* Quotation Marks: a string (of characters)
-* Parentheses: used to define or execute a function
+- Semicolon: marks the end of a statment
+- Quotation Marks: a string (of characters)
+- Parentheses: used to define or execute a function
 
 ```javascript
 function illuminateRed() {
-    // do stuff
+  // do stuff
 }
 
 function setupEvents() {
-    document.getElementById('stopButton').onclick = illuminateRed;
+  document.getElementById("stopButton").onclick = illuminateRed;
 }
 
 setupEvents();
@@ -324,20 +341,6 @@ comments
 
 --
 
-### "Comment out"
-Use comments to stop the program from running one or more lines of code
-
-```js
-// This line runs
-console.log('Hello world!');
-
-// These are commented out
-// console.log('Hello FEWD');
-// console.log('Hello GA');
-```
-
---
-
 ### Basic JavaScript Syntax
 
 [https://www.w3schools.com/js/js_syntax.asp](https://www.w3schools.com/js/js_syntax.asp)
@@ -349,6 +352,7 @@ console.log('Hello world!');
 `event + event handler => run some code`
 
 Note:
+
 - Let's cover some basic definitions
 
 --
@@ -393,7 +397,15 @@ Functions can be easily rerun (e.g. on every click, run these instructions)
 
 ### Example
 
+HTML
+
+```html
+<!-- I want to know when someone clicks on this button -->
+<button id="dealButton">Deal cards!</button>
+```
+
 JS
+
 ```js
 function dealRandomCard() {
   // code here that picks a card at random
@@ -401,13 +413,9 @@ function dealRandomCard() {
 
 // whenever someone clicks the html tag with an id="dealButton",
 // run the dealRandomCard function
-document.querySelector('#dealButton').onclick = dealRandomCard;
+document.querySelector("#dealButton").onclick = dealRandomCard;
 ```
-HTML
-```html
-<!-- I want to know when someone clicks on this button -->
-<button id="dealButton">Deal cards!</button>
-```
+
 ---
 
 ## How we solve problems in the browser with JavaScript
@@ -450,17 +458,20 @@ HTML
 ## Traffic light
 
 http://codepen.io/ericmasiello/pen/vxbgXo
+
 - Fork this on Codepen
 
 --
 
 ## Traffic light Assignment
-*15 mins*
+
+_15 mins_
+
 1. Make the slow button turn the 2nd light yellow
 2. Make the go button turn the last light green
 3. **BONUS:** Make it so that I can click the lights themselves to turn them on
 
-*If you finish early, help others around you if they're stuck.*
+_If you finish early, help others around you if they're stuck._
 
 ---
 
@@ -480,9 +491,9 @@ var age = 13;
 
 ### Variable declaration
 
-* `var` keyword tells our program that we wish to make a variable
-* We choose the name
-* Variables should only be _declared_ once
+- `var` keyword tells our program that we wish to make a variable
+- We choose the name
+- Variables should only be _declared_ once
 
 ```javascript
 var age;
@@ -492,8 +503,8 @@ var age;
 
 ### Variable assignment
 
-* Give our declared variable a value
-* This can happen multiple times
+- Give our declared variable a value
+- This can happen multiple times
 
 ```javascript
 age = 13;
@@ -517,9 +528,9 @@ var b = a + 2;
 ### Variable reassignment
 
 ```javascript
-var a = 'Eric';
+var a = "Eric";
 
-a = 'Erika';
+a = "Erika";
 ```
 
 --
@@ -538,7 +549,7 @@ var numberOfStudents = 20;
 ### Variable naming rules (syntax)
 
 - Names can contain letters, digits, underscores, and dollar signs
-- Names must begin with a letter, $, or _
+- Names must begin with a letter, \$, or \_
 - Names are case sensitive (y and Y are different variables)
 - Reserved words (e.g. `function` or `while`) cannot be used as names
 
@@ -568,13 +579,13 @@ What can those _values_ be??
 
 ### JavaScript data types
 
-- *Boolean*
+- _Boolean_
 - Null
 - Undefined
-- *Number*
-- *String*
+- _Number_
+- _String_
 - Symbol
-- Object\* 
+- Object\*
 
 \* includes Dates, Arrays, Regular Expressions, Functions, and more
 
@@ -583,7 +594,6 @@ What can those _values_ be??
 ### Number
 
 ```javascript
-
 // We call this type of number an "integer"
 var myInteger = 10;
 
@@ -597,13 +607,13 @@ var sum = myInteger + myFloat;
 
 ### Common JavaScript Math Operators
 
-| Operator        | Description           | Example  |
-| ------------- |:-------------:| -----:|
-| `+`      | Addition | `x = y + 2;` |
-| `-`      | Subtraction | `x = y - 2;` |
+| Operator |  Description   |      Example |
+| -------- | :------------: | -----------: |
+| `+`      |    Addition    | `x = y + 2;` |
+| `-`      |  Subtraction   | `x = y - 2;` |
 | `*`      | Multiplication | `x = y * 2;` |
-| `/`      | Division | `x = y / 2;` |
-| `%`      | Remainder | `x = y % 2;` |
+| `/`      |    Division    | `x = y / 2;` |
+| `%`      |   Remainder    | `x = y % 2;` |
 
 [JavaScript Arithmetic Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
 
@@ -614,13 +624,12 @@ var sum = myInteger + myFloat;
 Text, a collection of characters.
 
 ```javascript
+var firstName = "Eric";
 
-var firstName = 'Eric';
-
-var lastName = 'Masiello';
+var lastName = "Masiello";
 
 // fullName = 'Eric Masiello'
-var fullName = firstName + ' ' + lastName;
+var fullName = firstName + " " + lastName;
 ```
 
 Note:
@@ -634,7 +643,6 @@ This operation is called concatenation
 True or False
 
 ```javascript
-
 var lightOn = true;
 
 function turnLightsOff() {
@@ -649,16 +657,19 @@ function turnLightsOff() {
 ## Score keeper
 
 [CodePen](https://codepen.io/ericmasiello/pen/VWXWEB?editors=1010)
+
 - Fork this on Codepen
 
 --
 
 ## Score keeper Assignment
-*15 mins*
+
+_15 mins_
+
 1. Add a button labeled "Double" that takes the current score and doubles it
 2. Add a button labeled "Half" that takes the current score and cuts it in half
 
-*If you finish early, help others around you if they're stuck.*
+_If you finish early, help others around you if they're stuck._
 
 ---
 
@@ -669,18 +680,20 @@ function turnLightsOff() {
 --
 
 ### Node.js
-* Developed in 2009
-* Built on top of Google Chrome's _V8_ JavaScript engine
-* Open source runtime environment for running server-side JavaScript applications
-* Install the _LTS_ version from https://nodejs.org/
+
+- Developed in 2009
+- Built on top of Google Chrome's _V8_ JavaScript engine
+- Open source runtime environment for running server-side JavaScript applications
+- Install the _LTS_ version from https://nodejs.org/
 
 --
 
 ### Sample Node app
 
-* Copy this code http://bit.ly/2tpAOXZ
-* Save as add.js
-* Open your command line tool
+- Copy this code http://bit.ly/2tpAOXZ
+- Save as add.js
+- Open your command line tool
+
 ```
 node add.js 3 4
 ```
@@ -689,19 +702,18 @@ node add.js 3 4
 
 ## Resources
 
-* _Books_
-* [You Don't Know JS: Up & Going](http://shop.oreilly.com/product/0636920039303.do)
-* [HTML and CSS: Design and Build Websites](https://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189/ref=sr_1_2?ie=UTF8&qid=1502034868&sr=8-2&keywords=html+css+javascript)
-* _Online_
-* [Code Academy (Free)](https://www.codecademy.com/)
-* [Beginner JavaScript](https://beginnerjavascript.com/)
-* [JavaScript 30 (Free)](https://javascript30.com/)
-* _In Person Courses_
-* [Web Development Immersive (Full Time)](https://generalassemb.ly/education/web-development-immersive)
-* [Front End Development (Part time)](https://generalassemb.ly/education/front-end-web-development)
-* [JavaScript (Part Time)](https://generalassemb.ly/education/javascript-development)
+- _Books_
+- [You Don't Know JS: Up & Going](http://shop.oreilly.com/product/0636920039303.do)
+- [HTML and CSS: Design and Build Websites](https://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189/ref=sr_1_2?ie=UTF8&qid=1502034868&sr=8-2&keywords=html+css+javascript)
+- _Online_
+- [Code Academy (Free)](https://www.codecademy.com/)
+- [Beginner JavaScript](https://beginnerjavascript.com/)
+- [JavaScript 30 (Free)](https://javascript30.com/)
+- _In Person Courses_
+- [Web Development Immersive (Full Time)](https://generalassemb.ly/education/web-development-immersive)
+- [Front End Development (Part time)](https://generalassemb.ly/education/front-end-web-development)
+- [JavaScript (Part Time)](https://generalassemb.ly/education/javascript-development)
 
 ---
 
 ## Thank you! 🙏🏼🙏🏼🙏🏼
-
