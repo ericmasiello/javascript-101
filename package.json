@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/ericmasiello/javascript-101#readme",
   "devDependencies": {
-    "serve": "~10.1.1"
+    "serve": "~10.1.2"
   }
 }
